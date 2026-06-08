@@ -50,6 +50,7 @@ export function Starfield() {
       canvas.style.height = height + "px"
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
       seed()
+      if (reduced) staticFrame() // keep static field visible after resize under reduced motion
     }
 
     function drawStar(s, t) {
