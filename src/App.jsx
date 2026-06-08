@@ -1,14 +1,29 @@
 import { Starfield } from "./components/atmosphere/Starfield"
+import { WandCursor } from "./components/atmosphere/WandCursor"
+import { Navbar } from "./components/layout/Navbar"
+import { Footer } from "./components/layout/Footer"
+import { Hero } from "./components/sections/Hero"
+import { About } from "./components/sections/About"
+import { Skills } from "./components/sections/Skills"
+import { Projects } from "./components/sections/Projects"
+import { Experience } from "./components/sections/Experience"
+import { Contact } from "./components/sections/Contact"
 
 export default function App() {
   return (
     <>
       <Starfield />
-      <main className="relative z-10 min-h-[200vh] grid place-items-center">
-        <p className="font-display text-3xl text-[color:var(--color-parchment)]">
-          Starfield test ⚡ (scroll — it stays fixed)
-        </p>
+      <WandCursor />
+      <Navbar />
+      <main className="relative">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
       </main>
+      <Footer />
     </>
   )
 }
