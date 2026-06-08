@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* offset for the fixed navbar when jumping to anchors */
 }
 
 body {
