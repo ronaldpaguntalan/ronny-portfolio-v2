@@ -1,0 +1,23 @@
+{
+  "name": "ronny-portfolio-v2",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "The Enchanted Codex — a Harry Potter themed developer portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "framer-motion": "^11.15.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.0",
+    "vite": "^6.0.7"
+  }
+}
