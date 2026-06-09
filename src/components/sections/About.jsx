@@ -2,7 +2,7 @@ import { about, profile } from "../../data/content"
 import { SectionHeading } from "../ui/SectionHeading"
 import { Reveal } from "../ui/Reveal"
 import workingPhoto from "../../assets/images/web/present-profile-working.webp"
-import hpCostume from "../../assets/images/web/hp-costume.webp"
+import hpCreative from "../../assets/images/web/hp-creative.webp"
 
 export function About() {
   return (
@@ -23,14 +23,14 @@ export function About() {
               <div className="flip-inner">
                 <div className="flip-face">
                   <img
-                    src={workingPhoto}
+                    src={hpCreative}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flip-face flip-back" aria-hidden="true">
                   <img
-                    src={hpCostume}
+                    src={workingPhoto}
                     alt=""
                     className="w-full h-full object-cover"
                   />
