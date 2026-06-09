@@ -24,14 +24,14 @@ export function About() {
                 <div className="flip-face">
                   <img
                     src={workingPhoto}
-                    alt="Ronald Allan Paguntalan"
+                    alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flip-face flip-back">
+                <div className="flip-face flip-back" aria-hidden="true">
                   <img
                     src={hpCostume}
-                    alt="Ronald in wizard costume"
+                    alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>

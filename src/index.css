@@ -90,6 +90,7 @@ body::after {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
+  /* Defeat the snap-flip: the zeroed transition above would otherwise jump straight to the flipped face on hover/focus. */
   .flip-card:hover .flip-inner,
   .flip-card:focus-within .flip-inner { transform: none; }
 }
