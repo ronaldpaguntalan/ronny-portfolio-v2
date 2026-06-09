@@ -1,6 +1,8 @@
 import { about, profile } from "../../data/content"
 import { SectionHeading } from "../ui/SectionHeading"
 import { Reveal } from "../ui/Reveal"
+import workingPhoto from "../../assets/images/web/present-profile-working.webp"
+import hpCostume from "../../assets/images/web/hp-costume.webp"
 
 export function About() {
   return (
@@ -13,9 +15,27 @@ export function About() {
           <div className="relative w-64 h-80">
             <div className="absolute inset-0 rounded-lg border-2 border-[color:var(--color-gold)]/60" />
             <div className="absolute inset-2 rounded-md border border-[color:var(--color-gold)]/30" />
-            <div className="absolute inset-3 rounded-md bg-[color:var(--color-midnight-2)] parchment-grain grid place-items-center overflow-hidden">
-              {/* Replace this glyph with an <img> of your portrait when ready */}
-              <span className="text-6xl text-[color:var(--color-gold)]/70">⚡</span>
+            <div
+              className="absolute inset-3 rounded-md overflow-hidden flip-card"
+              tabIndex={0}
+              aria-label="Portrait of Ronald — hover or focus to reveal the wizard within"
+            >
+              <div className="flip-inner">
+                <div className="flip-face">
+                  <img
+                    src={workingPhoto}
+                    alt="Ronald Allan Paguntalan"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flip-face flip-back">
+                  <img
+                    src={hpCostume}
+                    alt="Ronald in wizard costume"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
             {/* corner flourishes */}
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-[color:var(--color-gold)]">✦</span>
