@@ -4,12 +4,6 @@ import { Reveal } from "../ui/Reveal"
 import gradSakbay from "../../assets/images/web/grad-sakbay.webp"
 import gradToga from "../../assets/images/web/grad-toga.webp"
 
-// Duo-stack graduation photos shown on the featured (university) card.
-const featuredPhotos = [
-  { src: gradSakbay, alt: "Ronald Allan Paguntalan at his university graduation" },
-  { src: gradToga, alt: "Ronald Allan Paguntalan in graduation toga" },
-]
-
 function EduDetails({ entry }) {
   const meta = [entry.period, entry.qpa].filter(Boolean).join(" · ")
   return (
@@ -50,20 +44,31 @@ export function Education() {
             <article className="rounded-xl border border-[color:var(--color-gold)]/20 bg-[color:var(--color-ink)]/40 parchment-grain p-6 md:p-8">
               {entry.featured ? (
                 <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-8 items-start">
-                  <div className="flex flex-col gap-3 max-w-[240px] mx-auto md:mx-0">
-                    {featuredPhotos.map((photo) => (
-                      <div
-                        key={photo.src}
-                        className="rounded-md border border-[color:var(--color-gold)]/50 p-1"
-                      >
-                        <img
-                          src={photo.src}
-                          alt={photo.alt}
-                          loading="lazy"
-                          className="block w-full h-auto rounded-sm object-cover"
-                        />
+                  <div className="max-w-[240px] mx-auto md:mx-0">
+                    <div
+                      className="relative aspect-[800/1000] rounded-md border border-[color:var(--color-gold)]/50 p-1 flip-card"
+                      tabIndex={0}
+                      aria-label="Graduation portraits — hover or focus to flip between them"
+                    >
+                      <div className="flip-inner">
+                        <div className="flip-face rounded-sm overflow-hidden">
+                          <img
+                            src={gradSakbay}
+                            alt="Ronald Allan Paguntalan at his university graduation"
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="flip-face flip-back rounded-sm overflow-hidden" aria-hidden="true">
+                          <img
+                            src={gradToga}
+                            alt=""
+                            loading="lazy"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                       </div>
-                    ))}
+                    </div>
                   </div>
                   <EduDetails entry={entry} />
                 </div>
