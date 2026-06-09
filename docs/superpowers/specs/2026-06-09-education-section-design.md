@@ -51,7 +51,7 @@ put the five images in `src/assets/images/` to use across the page.
 - Responsive: cards stack cleanly on mobile; duo-stack photos remain side detail.
 
 ### Edit: `src/App.jsx`
-- Import and render `<Education />` between `<Skills />`/`<Projects />` and `<Experience />`.
+- Import and render `<Education />` after `<Projects />` and before `<Experience />`.
   Final order: Hero → About → Skills → Projects → **Education** → Experience → Contact.
   (Education immediately precedes Experience per the chronological decision.)
 
