@@ -37,7 +37,7 @@ put the five images in `src/assets/images/` to use across the page.
 ### New: `src/components/sections/Education.jsx`
 - Follows existing section patterns: `SectionHeading` (eyebrow + title), `Reveal`
   scroll animations, parchment-grain cards, gold border/accent tokens.
-- Section `id="academy"`, heading **"The Academy of Sorcery"**, eyebrow
+- Section `id="academy"`, heading **"The Academy"**, eyebrow
   **"Scrolls of Scholarship"**.
 - **University card (featured):**
   - Duo stack of `Grad-SAKBAY` + `Grad-TOGA`, gold-framed, on one side.
