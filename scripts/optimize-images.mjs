@@ -13,6 +13,7 @@ const jobs = [
   { in: "HP_Costume.jpg",               out: "hp-costume.webp",              width: 700,  quality: 80 },
   { in: "HP_Costume2.jpg",              out: "hp-costume2.webp",             width: 700,  quality: 80 },
   { in: "HP_Creative.jpg",              out: "hp-creative.webp",             width: 1600, quality: 70 },
+  { in: "HP_Creative2.jpg",             out: "hp-creative2.webp",            width: 1600, quality: 70 },
 ]
 
 await mkdir(OUT, { recursive: true })

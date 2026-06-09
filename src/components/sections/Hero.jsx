@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 import { profile } from "../../data/content"
 import { FloatingCandles } from "../atmosphere/FloatingCandles"
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion"
-import heroBackdrop from "../../assets/images/web/hp-creative.webp"
+import heroBackdrop from "../../assets/images/web/hp-creative2.webp"
 
 export function Hero() {
   const reduced = usePrefersReducedMotion()
