@@ -103,7 +103,7 @@ export const experience = [
 
 export const education = [
   {
-    featured: true,
+    photoSet: "university",
     school: "University of Rizal System – Binangonan Campus",
     degree: "BS in Information System",
     period: "2018 — 2022",
@@ -111,7 +111,7 @@ export const education = [
     honors: ["Magna Cum Laude", "Outstanding Student Trainee Awardee", "Service Awardee"],
   },
   {
-    featured: false,
+    photoSet: "senior-high",
     school: "AMA Computer Learning Center College of Taytay",
     degree: "Senior High School",
     period: null,

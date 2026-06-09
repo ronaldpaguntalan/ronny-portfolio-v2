@@ -11,6 +11,7 @@ const jobs = [
   { in: "Grad-TOGA.png",                out: "grad-toga.webp",               width: 800,  quality: 80 },
   { in: "Present-Profile-Working.jpg",  out: "present-profile-working.webp", width: 700,  quality: 80 },
   { in: "HP_Costume.jpg",               out: "hp-costume.webp",              width: 700,  quality: 80 },
+  { in: "HP_Costume2.jpg",              out: "hp-costume2.webp",             width: 700,  quality: 80 },
   { in: "HP_Creative.jpg",              out: "hp-creative.webp",             width: 1600, quality: 70 },
 ]
 
