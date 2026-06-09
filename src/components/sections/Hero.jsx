@@ -2,6 +2,7 @@ import { motion } from "framer-motion"
 import { profile } from "../../data/content"
 import { FloatingCandles } from "../atmosphere/FloatingCandles"
 import { usePrefersReducedMotion } from "../../hooks/usePrefersReducedMotion"
+import heroBackdrop from "../../assets/images/web/hp-creative2.webp"
 
 export function Hero() {
   const reduced = usePrefersReducedMotion()
@@ -19,6 +20,17 @@ export function Hero() {
 
   return (
     <section id="hall" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* faint atmospheric backdrop */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src={heroBackdrop}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[color:var(--color-midnight)]/70 via-[color:var(--color-midnight)]/60 to-[color:var(--color-midnight)]" />
+      </div>
+
       <FloatingCandles />
 
       <motion.div

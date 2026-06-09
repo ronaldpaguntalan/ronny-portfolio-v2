@@ -16,3 +16,8 @@ dist-ssr/
 
 # brainstorm visual companion artifacts
 .superpowers/
+
+# Large original source images — only optimized web/*.webp are committed
+src/assets/images/*.png
+src/assets/images/*.jpg
+src/assets/images/*.jpeg

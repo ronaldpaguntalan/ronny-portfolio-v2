@@ -17,6 +17,7 @@ export const nav = [
   { id: "wizard", label: "Wizard" },
   { id: "spellbook", label: "Spellbook" },
   { id: "enchantments", label: "Enchantments" },
+  { id: "academy", label: "Academy" },
   { id: "chronicles", label: "Chronicles" },
   { id: "owl-post", label: "Owl Post" },
 ]
@@ -97,6 +98,25 @@ export const experience = [
     company: "First Apprenticeship",
     period: "2017 — 2019",
     blurb: "Learned the fundamental spells of the craft and shipped my first production charms.",
+  },
+]
+
+export const education = [
+  {
+    photoSet: "university",
+    school: "University of Rizal System – Binangonan Campus",
+    degree: "BS in Information System",
+    period: "2018 — 2022",
+    qpa: "QPA 1.29",
+    honors: ["Magna Cum Laude", "Outstanding Student Trainee Awardee", "Service Awardee"],
+  },
+  {
+    photoSet: "senior-high",
+    school: "AMA Computer Learning Center College of Taytay",
+    degree: "Senior High School",
+    period: null,
+    qpa: null,
+    honors: ["With High Honors", "Salutatorian"],
   },
 ]
 
