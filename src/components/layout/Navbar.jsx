@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { nav, profile } from "../../data/content"
+import { nav } from "../../data/content"
+import { Logo } from "../ui/Logo"
 
 // Split the nav into two balanced groups so the brand can sit between them.
 const SPLIT = Math.ceil(nav.length / 2)
@@ -53,11 +54,8 @@ export function Navbar() {
         </ul>
 
         {/* centered brand */}
-        <a href="#hall" className="flex items-center gap-2 group lg:justify-self-center">
-          <span className="text-xl text-[color:var(--color-gold)] transition-transform group-hover:scale-110">⚡</span>
-          <span className="font-heading tracking-[0.25em] text-sm text-[color:var(--color-parchment)] uppercase">
-            {profile.displayName}
-          </span>
+        <a href="#hall" className="group lg:justify-self-center" aria-label="Ronny — home">
+          <Logo className="text-lg sm:text-xl" />
         </a>
 
         {/* right links — desktop only */}

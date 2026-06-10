@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="RONNY">
+  <title>RONNY</title>
+  <defs>
+    <filter id="boltGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#f0d68a" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+  <!-- midnight rounded-square plate with a faint gold edge -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="#0a0e17" stroke="#c9a24b" stroke-opacity="0.4" stroke-width="1.5"/>
+  <!-- lightning bolt -->
+  <g transform="translate(20 14) scale(1.2)" filter="url(#boltGlow)">
+    <path d="M12 0 L2 17 L9 17 L7 30 L18 11 L11 11 Z" fill="#f0d68a"/>
+  </g>
+</svg>

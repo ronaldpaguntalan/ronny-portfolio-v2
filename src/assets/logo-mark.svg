@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 96" width="200" height="96" role="img" aria-label="RONNY">
+  <title>RONNY mark</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&amp;family=JetBrains+Mono:wght@500&amp;display=swap');
+      .name { font-family: 'Cinzel', serif; font-weight: 600; font-size: 52px; letter-spacing: 4px; fill: #f3e7c9; }
+      .bracket { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 38px; fill: #c9a24b; opacity: 0.65; }
+    </style>
+    <filter id="boltGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3.5" flood-color="#f0d68a" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- opening bracket -->
+  <text class="bracket" x="20" y="62" text-anchor="start">&lt;</text>
+
+  <!-- R -->
+  <text class="name" x="46" y="66" text-anchor="start">R</text>
+
+  <!-- lightning bolt -->
+  <g transform="translate(96 16) scale(1.867)" filter="url(#boltGlow)">
+    <path d="M12 0 L2 17 L9 17 L7 30 L18 11 L11 11 Z" fill="#f0d68a"/>
+  </g>
+
+  <!-- closing bracket -->
+  <text class="bracket" x="136" y="62" text-anchor="start">/&gt;</text>
+</svg>
