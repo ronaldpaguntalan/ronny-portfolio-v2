@@ -6,7 +6,7 @@ export function Skills() {
   return (
     <section id="spellbook" className="relative z-10 py-28 bg-[color:var(--color-midnight-2)]/40">
       <div className="max-w-6xl mx-auto px-6">
-        <SectionHeading eyebrow="The Spellbook" title="Spells & Disciplines" />
+        <SectionHeading eyebrow="The Spellbook" title="Skills & Tools" />
 
         <div className="grid sm:grid-cols-2 gap-6">
           {skillGroups.map((group, i) => (

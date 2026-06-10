@@ -6,7 +6,7 @@ export function Experience() {
   return (
     <section id="chronicles" className="relative z-10 py-28 bg-[color:var(--color-midnight-2)]/40">
       <div className="max-w-4xl mx-auto px-6">
-        <SectionHeading eyebrow="The Chronicles" title="A History of Conjurings" />
+        <SectionHeading eyebrow="The Chronicles" title="Experience" />
 
         <div className="relative">
           {/* glowing spine */}

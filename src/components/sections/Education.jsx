@@ -76,7 +76,7 @@ function EduDetails({ entry }) {
 export function Education() {
   return (
     <section id="academy" className="relative z-10 max-w-5xl mx-auto px-6 py-28">
-      <SectionHeading eyebrow="Scrolls of Scholarship" title="The Academy" />
+      <SectionHeading eyebrow="The Academy" title="Education" />
 
       <div className="space-y-8">
         {education.map((entry, i) => {
