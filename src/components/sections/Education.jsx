@@ -25,7 +25,7 @@ const photoSets = {
 
 function FlipPhoto({ set }) {
   return (
-    <div className="max-w-[240px] mx-auto md:mx-0">
+    <div className="w-full max-w-[240px] mx-auto md:mx-0">
       <div
         className={`relative ${set.ratioClass} rounded-md border border-[color:var(--color-gold)]/50 p-1 flip-card`}
         tabIndex={0}
