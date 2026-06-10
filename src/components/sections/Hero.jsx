@@ -19,7 +19,7 @@ export function Hero() {
       }
 
   return (
-    <section id="hall" className="relative min-h-screen flex items-start lg:items-center overflow-hidden pt-24 lg:pt-0">
+    <section id="hall" className="relative min-h-screen flex items-start lg:items-center overflow-hidden pt-24 pb-28 lg:pt-0 lg:pb-0">
       <FloatingCandles />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
