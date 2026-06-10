@@ -13,7 +13,6 @@ export const profile = {
 }
 
 export const nav = [
-  { id: "hall", label: "Hall" },
   { id: "wizard", label: "Wizard" },
   { id: "spellbook", label: "Spellbook" },
   { id: "enchantments", label: "Enchantments" },

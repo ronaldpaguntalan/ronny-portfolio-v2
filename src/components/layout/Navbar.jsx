@@ -44,16 +44,16 @@ export function Navbar() {
         Desktop (md+): 3-column grid [1fr | auto | 1fr] keeps the brand
         optically centered regardless of how wide each link group is.
       */}
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr]">
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between lg:grid lg:grid-cols-[1fr_auto_1fr]">
         {/* left links — desktop only */}
-        <ul className="hidden md:flex items-center justify-start gap-8">
+        <ul className="hidden lg:flex items-center justify-start gap-6 xl:gap-8">
           {navLeft.map((item) => (
             <NavLink key={item.id} item={item} />
           ))}
         </ul>
 
         {/* centered brand */}
-        <a href="#hall" className="flex items-center gap-2 group md:justify-self-center">
+        <a href="#hall" className="flex items-center gap-2 group lg:justify-self-center">
           <span className="text-xl text-[color:var(--color-gold)] transition-transform group-hover:scale-110">⚡</span>
           <span className="font-heading tracking-[0.25em] text-sm text-[color:var(--color-parchment)] uppercase">
             {profile.displayName}
@@ -61,7 +61,7 @@ export function Navbar() {
         </a>
 
         {/* right links — desktop only */}
-        <ul className="hidden md:flex items-center justify-end gap-8">
+        <ul className="hidden lg:flex items-center justify-end gap-6 xl:gap-8">
           {navRight.map((item) => (
             <NavLink key={item.id} item={item} />
           ))}
@@ -73,7 +73,7 @@ export function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden text-[color:var(--color-gold)] text-2xl leading-none"
+          className="lg:hidden text-[color:var(--color-gold)] text-2xl leading-none"
         >
           {open ? "✕" : "☰"}
         </button>
@@ -81,7 +81,7 @@ export function Navbar() {
 
       {/* mobile menu */}
       {open && (
-        <ul className="md:hidden bg-[color:var(--color-midnight-2)]/95 backdrop-blur-md border-t border-[color:var(--color-gold)]/20 px-6 py-4 flex flex-col gap-4">
+        <ul className="lg:hidden bg-[color:var(--color-midnight-2)]/95 backdrop-blur-md border-t border-[color:var(--color-gold)]/20 px-6 py-4 flex flex-col gap-4">
           {nav.map((item) => (
             <li key={item.id}>
               <a
