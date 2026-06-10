@@ -1,6 +1,25 @@
 import { useEffect, useState } from "react"
 import { nav, profile } from "../../data/content"
 
+// Split the nav into two balanced groups so the brand can sit between them.
+const SPLIT = Math.ceil(nav.length / 2)
+const navLeft = nav.slice(0, SPLIT)
+const navRight = nav.slice(SPLIT)
+
+function NavLink({ item }) {
+  return (
+    <li>
+      <a
+        href={`#${item.id}`}
+        className="group relative font-heading text-xs uppercase tracking-[0.2em] text-[color:var(--color-parchment-2)] hover:text-[color:var(--color-parchment)] transition-colors"
+      >
+        {item.label}
+        <span className="absolute -bottom-1 left-0 h-px w-0 bg-[color:var(--color-gold)] transition-all duration-300 group-hover:w-full" />
+      </a>
+    </li>
+  )
+}
+
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -20,26 +39,31 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#hall" className="flex items-center gap-2 group">
+      {/*
+        Mobile: flex justify-between → brand (left) + hamburger (right).
+        Desktop (md+): 3-column grid [1fr | auto | 1fr] keeps the brand
+        optically centered regardless of how wide each link group is.
+      */}
+      <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between md:grid md:grid-cols-[1fr_auto_1fr]">
+        {/* left links — desktop only */}
+        <ul className="hidden md:flex items-center justify-start gap-8">
+          {navLeft.map((item) => (
+            <NavLink key={item.id} item={item} />
+          ))}
+        </ul>
+
+        {/* centered brand */}
+        <a href="#hall" className="flex items-center gap-2 group md:justify-self-center">
           <span className="text-xl text-[color:var(--color-gold)] transition-transform group-hover:scale-110">⚡</span>
           <span className="font-heading tracking-[0.25em] text-sm text-[color:var(--color-parchment)] uppercase">
             {profile.displayName}
           </span>
         </a>
 
-        {/* desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
-          {nav.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                className="group relative font-heading text-xs uppercase tracking-[0.2em] text-[color:var(--color-parchment-2)] hover:text-[color:var(--color-parchment)] transition-colors"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-[color:var(--color-gold)] transition-all duration-300 group-hover:w-full" />
-              </a>
-            </li>
+        {/* right links — desktop only */}
+        <ul className="hidden md:flex items-center justify-end gap-8">
+          {navRight.map((item) => (
+            <NavLink key={item.id} item={item} />
           ))}
         </ul>
 
